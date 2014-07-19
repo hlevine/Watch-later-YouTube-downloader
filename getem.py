@@ -60,3 +60,6 @@ for video in videos:
         break
     youtube = buildAPI()
     youtube.playlistItems().delete(id=video["id"]).execute()
+
+from tendo import singleton
+me = singleton.SingleInstance()
