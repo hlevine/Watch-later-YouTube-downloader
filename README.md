@@ -29,6 +29,8 @@ The folder youtube_download folder will be created.
 
 Once collected the dwatch later video will be removed from the list.
 
+To automated the download action set it as a cronjob.
+
 Acknowledgements:
 Most of this list came from the blog of Olivier Corradi's. (http://oliviercorradi.wordpress.com/)
 
