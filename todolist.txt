@@ -1,0 +1,2 @@
+1. Fix youtube-dl issue so that two instances won't run at the same time.
+2. Change youtube-dl command line to download best quality audio and video.
