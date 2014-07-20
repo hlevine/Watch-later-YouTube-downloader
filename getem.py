@@ -1,3 +1,23 @@
+import sys
+import os.path
+
+PATH='./running_marker.txt'
+
+if os.path.isfile(PATH) and os.access(PATH, os.R_OK):
+    print "Already running"
+    sys.exit(0)
+else:
+    print "No other instances running. creating marker file"
+
+def write():
+    name = 'running_marker.txt'
+    try:
+        file = open(name,'w')
+        file.close()
+    except:
+        sys.exit(0) # quit Python
+write()
+
 from oauth2client.file import Storage
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.tools import run
@@ -61,5 +81,4 @@ for video in videos:
     youtube = buildAPI()
     youtube.playlistItems().delete(id=video["id"]).execute()
 
-from tendo import singleton
-me = singleton.SingleInstance()
+os.remove(PATH)
