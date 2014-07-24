@@ -1,9 +1,9 @@
 import sys
 import os.path
 
-PATH='./running_marker.txt'
+marker='./running_marker.txt'
 
-if os.path.isfile(PATH) and os.access(PATH, os.R_OK):
+if os.path.isfile(marker) and os.access(marker, os.R_OK):
     print "Already running"
     sys.exit(0)
 else:
@@ -81,4 +81,4 @@ for video in videos:
     youtube = buildAPI()
     youtube.playlistItems().delete(id=video["id"]).execute()
 
-os.remove(PATH)
+os.remove(marker)
